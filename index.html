@@ -4,11 +4,27 @@
 <head>
 	<title>lol anniversary</title>
 	<meta charset="UTF-8" />
+	<style>
+		body {
+			font-family: sans-serif;
+		}
+		#btn {
+			height: 200px;
+			width: 200px;
+		}
+		footer {
+			width: 100%;
+			text-align: center;
+			position: fixed;
+			bottom: 0;
+		}
+	</style>
 </head>
 
 <body>
 	<p id="code"></p>
 	<button onClick="getCode()" id="btn">Search & Copy</button>
+	<footer> <small>Copyright &copy; 2021, 小彥. All Rights Reserved</small> </footer> 
 	<script>
 	function getCode() {
 		btn.disabled = true
