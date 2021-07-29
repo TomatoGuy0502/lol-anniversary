@@ -30,7 +30,7 @@ const config = {
 
 const handler = async event => {
   // const { url } = event.requestMeta
-  if (event.headers.host !== 'https://lol-anniversary.netlify.app') {
+  if (event.headers.host !== 'lol-anniversary.netlify.app') {
     return { statusCode: 403, body: 'Forbidden' }
   }
   try {
