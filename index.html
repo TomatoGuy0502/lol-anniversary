@@ -11,13 +11,18 @@
 	<button onClick="getCode()">Search & Copy</button>
 	<script>
 	function getCode() {
+		code.disabled = true
 		fetch('/.netlify/functions/lol-code')
   		.then(function(response) {
  		   return response.json();
   		})
  		 .then(function(data) {
   		  code.innerText = data.code
-  		});
+		  navigator.clipboard.writeText(data.code)
+  		})
+		 .finally(function(){
+		  code.disabled = false
+		 })
 	}
 	</script>
 </body>
