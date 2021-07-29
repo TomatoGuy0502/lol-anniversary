@@ -8,10 +8,10 @@
 
 <body>
 	<p id="code"></p>
-	<button onClick="getCode()">Search & Copy</button>
+	<button onClick="getCode()" id="btn">Search & Copy</button>
 	<script>
 	function getCode() {
-		code.disabled = true
+		btn.disabled = true
 		fetch('/.netlify/functions/lol-code')
   		.then(function(response) {
  		   return response.json();
@@ -21,7 +21,7 @@
 		  navigator.clipboard.writeText(data.code)
   		})
 		 .finally(function(){
-		  code.disabled = false
+		  btn.disabled = false
 		 })
 	}
 	</script>
