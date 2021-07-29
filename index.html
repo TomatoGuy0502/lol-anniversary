@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>lol anniversary</title>
+	<meta charset="UTF-8" />
+</head>
+
+<body>
+	<p id="code"></p>
+	<button onClick="getCode()">Search & Copy</button>
+	<script>
+	function getCode() {
+		fetch('/.netlify/functions/lol-code')
+  		.then(function(response) {
+ 		   return response.json();
+  		})
+ 		 .then(function(data) {
+  		  code.innerText = data.code
+  		});
+	}
+	</script>
+</body>
+
+</html>
