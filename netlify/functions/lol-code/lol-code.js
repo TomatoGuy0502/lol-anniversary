@@ -6,15 +6,10 @@ const agent = new https.Agent({
 })
 
 const data = JSON.stringify({
-  obj_id: 'tw_32775_newnews_32153',
+  obj_id: 'tw_32775_newnews_32159',
   root_id: 0,
   size: 3,
-  replies: 10,
   order: 2,
-  replies_order: 2,
-  session_key:
-    'cda0c8df05ba75fa8edd72b49eac81ee5263f83c4c8214efdeca7a42800c15fa',
-  web_app_id: 10047
 })
 
 const config = {
