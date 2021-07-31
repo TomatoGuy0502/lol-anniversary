@@ -8,10 +8,6 @@
 		body {
 			font-family: sans-serif;
 		}
-		#btn {
-			height: 200px;
-			width: 200px;
-		}
 		footer {
 			width: 100%;
 			text-align: center;
@@ -22,25 +18,9 @@
 </head>
 
 <body>
-	<p id="code"></p>
-	<button onClick="getCode()" id="btn">Search & Copy</button>
+	<p>這個網頁的流量超過免費額度了，然後我的巴哈又暫時被水桶（前幾天亂貼邀請碼🤣），沒辦法更新文章</p>
+	<p>請先移駕至新駕的網站：<a href="https://lol-anniversary.tomatoguy.me">https://lol-anniversary.tomatoguy.me</a></p>
 	<footer> <small>Copyright &copy; 2021, 小彥. All Rights Reserved</small> </footer> 
-	<script>
-	function getCode() {
-		btn.disabled = true
-		fetch('/.netlify/functions/lol-code')
-  		.then(function(response) {
- 		   return response.json();
-  		})
- 		 .then(function(data) {
-  		  code.innerText = data.code
-		  navigator.clipboard.writeText(data.code)
-  		})
-		 .finally(function(){
-		  btn.disabled = false
-		 })
-	}
-	</script>
 </body>
 
 </html>
